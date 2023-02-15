@@ -1,0 +1,17 @@
+**/.idea
+**/target
+**/.classpath
+**/.project
+**/.DS_Store
+**/build/
+**/tmp/
+**/*.pyc
+**/*.orig
+**/catalina.base_IS_UNDEFINED/
+**/py_work/
+*.swp
+*.log
+**/.pydevproject
+**/.cache-tests
+**/.cache-main
+*.iml
