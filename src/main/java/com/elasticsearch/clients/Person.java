@@ -1,4 +1,4 @@
-package com.javacodegeeks.example;
+package com.elasticsearch.clients;
 
 public class Person {
 
@@ -9,7 +9,14 @@ public class Person {
 
     private String lastName;
 
-
+    public Person() {
+    }
+    public Person(String personId, String name, String age, String lastName) {
+        this.personId = personId;
+        this.name = name;
+        this.age = age;
+        this.lastName = lastName;
+    }
 
     public String getPersonId() {
         return personId;

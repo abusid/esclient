@@ -1,4 +1,4 @@
-package com.javacodegeeks.example;
+package com.elasticsearch.clients;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
