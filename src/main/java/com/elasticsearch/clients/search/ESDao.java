@@ -12,6 +12,7 @@ import co.elastic.clients.elasticsearch.core.search.TrackHits;
 import com.elasticsearch.clients.Person;
 import com.elasticsearch.clients.SearchQueryResponse;
 import com.elasticsearch.clients.utils.EsUtils;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class ESDao {
             SearchResponse<Person> searchResponse = client.search(request, Person.class);
             return buildQueryResponse(searchResponse);
         } catch (IOException e) {
+
             throw new RuntimeException(e);
         }
     }
@@ -35,11 +37,12 @@ public class ESDao {
     public void insertData(Person person, ElasticsearchClient client, String index) throws IOException {
         IndexRequest<Person> request = IndexRequest.of(i -> i
                 .index(index)
+
                 .id(person.getPersonId())
                 .document(person)
         );
 
-        IndexResponse response = client.index(request);
+       client.index(request);
 
     }
 
